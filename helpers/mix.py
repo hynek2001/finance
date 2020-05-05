@@ -6,6 +6,7 @@ import os
 import pandas_datareader.data as web
 import pickle
 import requests
+import pandas as pd
 
 
 
@@ -51,10 +52,19 @@ def getSP500Tickers():
     tickers = [s.replace('\n', '') for s in tickers]
     return tickers
 
+def getAllDataDaily():
+    res = None
+    tmpf = "alltickers.h5"
+    if os.path.exists(tmpf) == False:
+        tickers = getSP500Tickers()
+        tickers.remove('BRK.B')
+        tickers.remove('BF.B')
+        tcks = yf.Tickers(tickers=tickers)
+        res = tcks.download(interval="1d",
+                            start=datetime.datetime.strptime("2001-01-01", "%Y-%M-%d"))
+        res.to_hdf(tmpf, mode="w", key='df')
 
+    else:
+        res = pd.read_hdf(tmpf, key='df')
+    return res
 
-# tickers=getSP500Tickers()
-# start = datetime.datetime(2019,1,1)
-# end = datetime.datetime(2019,7,17)
-# data = yf.download(tickers, start=start, end=end)
-# print(data)
