@@ -9,8 +9,9 @@ pip install git+git://github.com/hynek2001/finance.git
   from mfin.yahoo import getStock
   getStock("AMZN")
   ```        
-  * getNasdaqStocks  
+  * getStocks  
   ```python
   from mfin.yahoo import getStocks
   getStocks(["AMZN","BA"])
   ```
+  
