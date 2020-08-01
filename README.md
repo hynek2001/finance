@@ -1,11 +1,9 @@
 #### Finance library
     * mfin.yahoo
-        getNasdaqStock
+        ** getNasdaqStock
+```python
+        from mfin.yahoo import getNasdaqStock
+        getNasdaqStock("AMZN")
+```
         
-            ```python
-            from mfin.yahoo import getNasdaqStock
-            getNasdaqStock("AMZN")
-             
-            ```
-        
-        getNasdaqStocks
+        ** getNasdaqStocks
