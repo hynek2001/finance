@@ -1,5 +1,5 @@
 #### install
-```cmd
+```
 pip install git+git://github.com/hynek2001/finance.git
 ```
 #### Finance library
