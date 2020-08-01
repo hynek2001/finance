@@ -14,15 +14,15 @@ import re
 # konverze do floatu... locale.atof('1,000,000.53')
 
 
-def getNasdaqStocks(stocks: list) -> dict:
+def getStocks(stocks: list) -> dict:
     """get list of nasdaq stock"""
     rsDa = {}
     for ii in stocks:
-        rsDa[ii] = getNasdaqStock(stock=ii)
+        rsDa[ii] = getStock(stock=ii)
     return rsDa
 
 
-def getNasdaqStock(stock: str) -> dict:
+def getStock(stock: str) -> dict:
     """get nasdaq stock"""
     r = requests.get(f"https://finance.yahoo.com/quote/AMZN?p={stock}&.tsrc=fin-srch").text
     soup = BeautifulSoup(r, 'html.parser')

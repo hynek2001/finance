@@ -4,13 +4,13 @@ pip install git+git://github.com/hynek2001/finance.git
 ```
 #### Finance library
 * mfin.yahoo  
-  * getNasdaqStock
+  * getStock
   ```python
-  from mfin.yahoo import getNasdaqStock
-  getNasdaqStock("AMZN")
+  from mfin.yahoo import getStock
+  getStock("AMZN")
   ```        
   * getNasdaqStocks  
   ```python
-  from mfin.yahoo import getNasdaqStocks
-  getNasdaqStocks(["AMZN","BA"])
+  from mfin.yahoo import getStocks
+  getStocks(["AMZN","BA"])
   ```
