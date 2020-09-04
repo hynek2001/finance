@@ -2,7 +2,7 @@
 ```
 pip install git+git://github.com/hynek2001/finance.git
 ```
-#### Finance library
+#### Finance python library
 * mfin.yahoo  
   * getStock
   ```python
@@ -15,3 +15,10 @@ pip install git+git://github.com/hynek2001/finance.git
   getStocks(["AMZN","BA"])
   ```
   
+  
+### zdroje dat
+* https://www.tradingview.com/
+* yahoo finance 
+
+### analyticke nastroje 
+* myfxbook

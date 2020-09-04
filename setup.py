@@ -6,5 +6,5 @@ setup(name='mfin',
       author='Hynek Los',
       author_email='hynek.los@gmail.com',
       url='https://github.com/hynek2001/finance',
-      packages=['pandas'],
+      packages=['requests-mock'],
      )

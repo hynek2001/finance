@@ -24,7 +24,7 @@ def getStocks(stocks: list) -> dict:
 
 def getStock(stock: str) -> dict:
     """get nasdaq stock"""
-    r = requests.get(f"https://finance.yahoo.com/quote/AMZN?p={stock}&.tsrc=fin-srch").text
+    r = requests.get(f"https://finance.yahoo.com/quote/{stock}").text
     soup = BeautifulSoup(r, 'html.parser')
     alldata = soup.find_all('tbody')
     ydata = {}
